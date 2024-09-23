@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmail</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="image/gmailicon.jpg" type="image/x-icon"><link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+  html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
+  .w3-bar-block .w3-bar-item {padding: 16px}
+  </style>
+ <link rel="stylesheet" href="Style/style.css">
+</head>
+<body class="bodybricks container">
+    <!-- Div that is "main div or whole div" for layout -->
+     <!-- Layout -->
+<div class="mainbricks row">
+<!-- <p class="h1">Gmail Project</p> -->
+<section class="text-dark"> <!-- Side vertical Navigation -->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <!-------------- Side vertical Navigation / col-md-3--------------------------- -->
+  <nav class="col-md-3"   id="sidebarbricksid"> 
+  <div class="sidebarbricks w3-bar-block w3-collapse bg-light text-dark w3-animate-left w3-card navsidebar" id="mySidebar">
+    <a href="https://www.google.com/"><img src="image/gmail.JPG"  class="picNavbricks"></a>` 
+    <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
+    class="bar-itembricks underlinebricks w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
+    <a href="javascript:void(0)" class=" backgroundbricks bar-itembricks underlinebricks greycolorbricks inboxbricks" onclick="document.getElementById('id01').style.display='block'">New Message <i class="p-3 fa fa-pencil"></i></a>
+    <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="bar-itembricks inboxbricks underlinebricks"><i class="fa fa-inbox mr-3"></i>Inbox (3)<i class="fa fa-caret-down ml-3"></i></a>
+    <div id="Demo1" class="w3-hide w3-animate-left">
+      <a href="javascript:void(0)" class="bar-itembricks underlinebricks w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close();" id="firstTab">
+        <div class="w3-container">
+          <img class="rounded-circle mr-3 mb-3" src="image/image104.JPG" style="width:15%;"><span class="w3-opacity w3-large">JMA Wireless</span>
+          <p class="h6">Subject: Interview</p>
+          <p>Thank you for your interest in the JMA Project Manager position....</p>
+        </div>
+      </a>
+       <a href="javascript:void(0)" class="bar-itembricks underlinebricks w3-border-bottom test w3-hover-light-grey" onclick="openMail('Jane');w3_close();">
+        <div class="w3-container">
+          <img class="rounded-circle mr-3 mb-3" src="image/image105.JPG" style="width:15%;"><span class="w3-opacity w3-large">Air S</span>
+          <p>Hello ,<br> I hope this email finds you well. To briefly introduce myself,...</p>
+        </div>
+      </a>
+      <a href="javascript:void(0)" class=" bar-itembricks underlinebricks w3-border-bottom test w3-hover-light-grey" onclick="openMail('John');w3_close();">
+        <div class="w3-container">
+          <img class="rounded-circle mr-3 mb-3" src="image/image106.JPG" style="width:15%;"><span class="w3-opacity w3-large">Matteo C</span>
+          <p>Grazie per il tuo messaggio.</p>
+        </div>
+      </a>
+    </div>
+ <!-- new java script array object class. --> 
+
+<!-- y=[el.children[0], el.children[1], el.children[2]];
+console.log(y);
+
+var el = document.getElementById("Demo1");
+console.log(el); -->
+
+ <div><a href="#" class="bar-itembricks underlinebricks"><i class="fa fa-paper-plane mr-3"></i>Sent</a></div>
+ <div><a href="#" class="bar-itembricks underlinebricks"><i class="fa fa-hourglass-end mr-3"></i>Drafts</a></div>
+ <div><a href="#" class="bar-itembricks underlinebricks"><i class="fa fa-trash mr-3"></i>Trash</a></div>
+
+</nav>
+</section>
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
+<!-- <section> Slider/ send Message / Modal that pops up when you click on "New Message" -->
+<!-- Modal part in Bootstrap 5 -->
+ 
+<div id="id01" class="modalbricks modalindexbricks">
+  <div class="modalbricks2 w3-animate-zoom">
+    <div class="w3-container p-2 bg-success">
+       <span onclick="document.getElementById('id01').style.display='none'"
+       class="btn btn-light rightbricks sizebarmodalbricks"><i class="fa fa-remove"></i></span>
+      <p class="h2 text-secondary">Send Mail</p>
+    </div>
+ 
+       <!-- To and From Lables and input in Bootstrap 5 / Type attribute = Email or text -->
+      <form action="/action_page.php">
+        <div class="mb-3 mt-3 ml-3 mr-3">
+          <label for="email">To</label>
+          <input type="email" class="form-control mb-3" id="email" placeholder="Enter email To sb/someplace" name="email">
+        </div>
+        <div class="mb-3 ml-3 mr-3">
+          <label for="email">From</label>
+          <input type="email" class="form-control mb-3" id="email" placeholder="Enter your email" name="email">
+        </div>
+        <div class="mb-3 ml-3 mr-3">
+          <label for="text">Subject</label>
+          <input type="text" class="form-control mb-3" id="text" placeholder="Subject / Interview" name="text">
+        </div>
+      </form>
+
+      <!-- form and lable and textarea in Bootstrap 5  -->
+      <form action="/action_page.php">
+        <div class="mt-3 ml-3 mr-3">
+      <label for="comment">Comments:</label>
+      <textarea class="form-control inputbricks w3-border mb-3" rows="5" id="comment" name="text" style="height:150px" placeholder="What's on your mind? please write here"></textarea>
+      </div>
+      </form>
+      <!-- send and cancel are "Button Bootstrap 5"-->
+      <div>
+        <button type="button" class="btn btn-success m-3" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></button>
+        <button type="button" class="btn btn-success rightbricks m-3" onclick="document.getElementById('id01').style.display='none'">Send  <i class="fa fa-paper-plane"></i></button> 
+      </div>    
+    </div>
+  </div>
+</div>
+<!-- </section>  -->
+<!-- Overlay effect when opening the side navigation on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+<!----------------------------- Page content/col-md-9 ------------------------------------->
+<section class=" text-dark col-md-9 contentmarginbricks"> 
+    <i class="fa fa-bars btn btn-light w3-white w3-hide-large w3-xlarge ml-3 mt-3" onclick="w3_open()"></i>
+    <a href="javascript:void(0)" class="w3-hide-large bg-success btn btn-success rightbricks mt-3 mr-3" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
+    
+    <div id="Borge" class="w3-container person">
+      <br>
+      <img class="rounded-circle w3-animate-top contentimagebricks mb-3" src="image/image104.JPG" >
+      <p class="h5 w3-opacity">Subject: Interview</p>
+      <p class="h4"><i class="fa fa-clock-o"></i> From JMA Wireless, Aug 15, 2024.</p>
+      <button type="button" class="btn btn-info btn-outline-light text-light text-dark underlinebricks mt-2">Reply<i class="ml-3 fa fa-mail-reply"></i></button>
+      <button type="button" class="btn btn-info btn-outline-light text-light text-dark underlinebricks mt-2">Forward<i class="ml-3 fa fa-arrow-right"></i></button>
+      <hr>
+      <p class="text-primary">Hi Raheleh,<br>
+ 
+        Thank you for your interest in the JMA Project Manager position. We were clearly impressed with your background and competence.  We had a number of excellent candidates, including yourself, and it was a difficult decision. 
+         
+        In the end, we decided to move forward with another candidate.  We will keep you in mind for future openings as they develop.</p>
+        <p class="text-primary">Best Regards, <br> The JMA Recruiting Team.   
+    </div>
+    
+    <div id="Jane" class="w3-container person">
+      <br>
+      <img class="rounded-circle w3-animate-top contentimagebricks mb-3" src="image/image105.JPG" >
+      <p class="h5 w3-opacity">Subject: Interview</p>
+      <p class="h4"><i class="fa fa-clock-o"></i> From AS, Aug 15, 2024.</p>
+      <button type="button" class="btn btn-info btn-outline-light text-dark underlinebricks mt-2" href="#">Reply<i class="ml-3 fa fa-mail-reply"></i></button>
+      <button type="button" class="btn btn-info btn-outline-light text-dark underlinebricks mt-2" href="#">Forward<i class="ml-3 fa fa-arrow-right"></i></button>
+      <hr>
+      <p class="text-primary">Hello ,<br> I hope this email finds you well. To briefly introduce myself, I´m a recruiter with AS and I specialize in the placement of professionals in the Oil and Gas Area. I write you now because I´m currently recruiting for an Methods and Data Engineer and I think your background matches the client´s requirements. 
+
+        This opportunity is for you to work with Technip, in Paris, France. 
+        
+        Attached to this email you will find the job description so you can read and make sure you feel comfortable for this role.
+        
+        Please, let me know if you´re interested in this role by sending me the below information:
+        
+        Full name according:
+        Current residency Location:
+        Citizenship:
+        Date of birth:
+        Year you began university or college and year you finished it:
+        Name of university or college: 
+        Specialty you studied there:
+        Availability of candidate:
+        Salary Expectation:
+        Languages you speak:
+        
+        I would love to talk to you about this role over a phone call. Is there a better phone or time for me to call you?
+        
+        Please, let me know your thoughts on this ASAP, I wouldn´t want you to miss this amazing opportunity!</p>
+      <p class="text-primary">Kind regards, <br> Delivery Consultant <br>L.M</p>
+    </div>
+    
+    <div id="John" class="container person">
+      <br>
+      <img class="rounded-circle w3-animate-top contentimagebricks mb-3" src="image/image106.JPG" >
+      <p class="h5 w3-opacity">Subject: Ciao Raheleh</p>
+      <p class="h4"><i class="fa fa-clock-o"></i> From Matteo C, Aug 16, 2024.</p>
+      <button type="button" class="btn btn-info btn-outline-light text-light text-dark underlinebricks mt-2" href="#">Reply<i class="ml-3 fa fa-mail-reply"></i></button>
+        <button type="button" class="btn btn-info btn-outline-light text-light text-dark underlinebricks mt-2" href="#">Forward<i class="ml-3 fa fa-arrow-right"></i></button>
+      <hr>
+      <p class="text-primary">Ciao Raheleh,</p>
+      <p class="text-primary">Grazie per il tuo messaggio.</p> 
+      <p class="text-primary">A dopo, <br> Matteo </p>
+    </div>    
+</section>
+
+<!-- ----------------------------------- JAVA Script ----------------------------------------- -->
+<script>
+  var openTab = document.getElementById("firstTab");
+  openTab.click();
+</script>
+<!-- ----------------------------------- link Java Script ------------------------------------ -->
+ <script src="script.js"></script>
+
+</body>
+</html>
